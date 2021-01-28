@@ -10,7 +10,7 @@ class NextCloudModules:
         self.url = os.getenv('NEXT_CLOUD_URL')
         self.user = os.getenv('NEXT_CLOUD_USER')
         self.password = os.getenv('NEXT_CLOUD_PASSWORD')
-        self.down_load_dir = './static/DownloadImages/'
+        self.down_load_dir = './static/Downloads/'
     
     def get_file_list(self, dir_name: str):
         url = self.url + '/remote.php/dav/files/fyui001/' + dir_name

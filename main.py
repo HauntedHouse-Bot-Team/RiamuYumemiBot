@@ -3,9 +3,9 @@ import discord
 from dotenv import load_dotenv
 from discord.ext import commands
 
-
 INITIAL_EXTENSIONS = [
     'cog.MyCog',
+    'cog.MusicCog',
 ]
 
 class MyBot(commands.Bot):

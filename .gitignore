@@ -6,8 +6,8 @@ static/UploadImages/*
 static/WorldCloud/*
 !static/WorldCloud/.gitkeep
 docker-compose.yml
-static/DownloadImages/*
-!static/DownloadImages/.gitkeep
+static/Downloads/*
+!static/Downloads/.gitkeep
 
 # IDE and editor specific files #
 /nbproject
