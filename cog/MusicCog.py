@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from discord.ext import commands
 import discord
+import urllib.parse
 
 from src.NextCloudModules import NextCloudModules as NextCloudMod
 
@@ -28,8 +29,7 @@ class MusicCog(commands.Cog):
         next_cloud_mod = NextCloudMod()            
         files = next_cloud_mod.get_file_list('share/Music')
         for file in files:
-            if music_name in file:
-                print('ok')
+            if music_name in urllib.parse.unquote(file):
                 file_path = next_cloud_mod.get_file(file, 'music.mp3')
                 self.voice.play(discord.FFmpegPCMAudio(file_path))
 def setup(bot):
