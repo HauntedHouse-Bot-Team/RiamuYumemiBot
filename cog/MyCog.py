@@ -216,7 +216,8 @@ class MyBot(commands.Cog):
 
         await ctx.send(file=discord.File(photo_file_name))
 
-
+    # 機能廃止: 2021/11/06
+    '''
     @commands.command(name='卒業')
     async def graduate(self, ctx, arg):
         for row in ctx.author.roles:
@@ -229,6 +230,7 @@ class MyBot(commands.Cog):
                 await dm_channel.send(invite)
                 mod = UserMod()
                 mod.member_delete(arg)
+    '''
 
     @commands.command()
     async def member_register(self, ctx):
